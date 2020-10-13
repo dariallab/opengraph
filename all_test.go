@@ -59,6 +59,7 @@ func TestFetch_02(t *testing.T) {
 	Expect(t, og.Title).ToBe("はいさいナイト")
 	Expect(t, og.Description).ToBe("All Genre Music Party")
 	Expect(t, og.URL.Value).ToBe("https://haisai.party/")
+	Expect(t, og.CanonicalURL).ToBe("https://open.spotify.com/")
 
 	// b := bytes.NewBuffer(nil)
 	// json.NewEncoder(b).Encode(og)

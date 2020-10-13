@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/otiai10/opengraph"
+	"github.com/dariallab/opengraph"
 	"github.com/urfave/cli"
 )
 
