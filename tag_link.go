@@ -27,6 +27,8 @@ func (link *Link) Contribute(og *OpenGraph) error {
 	switch {
 	case link.IsFavicon():
 		og.Favicon = link.Href
+	case link.IsCanonical():
+		og.CanonicalURL = link.Href
 	}
 	return nil
 }
@@ -34,4 +36,9 @@ func (link *Link) Contribute(og *OpenGraph) error {
 // IsFavicon returns if it can be "favicon" of *opengraph.OpenGraph
 func (link *Link) IsFavicon() bool {
 	return link.Rel == "shortcut icon" || link.Rel == "icon"
+}
+
+// IsCanonical returns if it can be "canonical" of *opengraph.OpenGraph
+func (link *Link) IsCanonical() bool {
+	return link.Rel == "canonical"
 }

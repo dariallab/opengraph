@@ -52,7 +52,8 @@ type OpenGraph struct {
 	LocaleAlt   []string
 
 	// Additionals
-	Favicon string
+	Favicon      string
+	CanonicalURL string
 
 	// Utils
 	HTTPClient *http.Client `json:"-"`
